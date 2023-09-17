@@ -1,0 +1,38 @@
+[gd_scene load_steps=3 format=3 uid="uid://b5vo3ofp8absu"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gspyw"]
+size = Vector2(1920, 50)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_s0xom"]
+size = Vector2(50, 1080)
+
+[node name="Level" type="Node2D"]
+
+[node name="Pared superior" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Pared superior"]
+position = Vector2(960, -26)
+shape = SubResource("RectangleShape2D_gspyw")
+one_way_collision_margin = 0.0
+debug_color = Color(0, 0.6, 0.701961, 0.419608)
+
+[node name="Pared Inferior" type="StaticBody2D" parent="."]
+position = Vector2(0, 1130)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Pared Inferior"]
+position = Vector2(960, -24)
+shape = SubResource("RectangleShape2D_gspyw")
+one_way_collision_margin = 0.0
+debug_color = Color(0, 0.6, 0.701961, 0.419608)
+
+[node name="ArcoPlayer" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ArcoPlayer"]
+position = Vector2(-25, 540)
+shape = SubResource("RectangleShape2D_s0xom")
+
+[node name="ArcoPlayer2" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ArcoPlayer2"]
+position = Vector2(1945, 540)
+shape = SubResource("RectangleShape2D_s0xom")
